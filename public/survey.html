@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Survey</title>
@@ -9,33 +10,84 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
 
   <div class="container">
 
     <!-- <div class="jumbotron"> -->
-      <h1 class="text-center"><span></span> Survey Questions</h1>
-      <hr>
-      <h4 class="text-left">About You</h4>
-      <br>
+      <header>
+    <h1 class="text-center"><span></span> Survey Questions</h1>
+      </header>
+    <hr>
+    <h4 class="text-left">About You</h4>
+    <br>
     <!-- Created a form for survey -->
-      <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Name (Required)</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insert Image">
-            </div>
-           
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-      
+    
+      <div class="form-group">
+        <label for="exampleInput1">Name (Required)</label>
+        <input type="name" class="form-control" id="exampleInput1" placeholder="Name">
+      </div>
+<!-- image input -->
 
-      
+      <div class="form-group">
+        <label for="exampleFormControlFile1">Link to Photo Image</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
+<!-- Questions -->
+<form name="myForm">
+  Q1. What is your favorite place to eat?<br>
+  <input type="radio" name="q1" value="1"> james place <br>
+  <input type="radio"name="q1"  value="2"> eatery<br>
+  <input type="radio"name="q1"  value="3"> brunch brunch<br>
+  <input type="radio"name="q1"  value="4"> Outlet <br>
+  <input type="radio"name="q1"  value="5"> express<br>
+
+  Q2. If you could pick anywhere in the world where would it be?<br>
+  <input type="radio" name="q2" value="1"> United States <br>
+  <input type="radio"name="q2"  value="2"> Germany <br>
+  <input type="radio"name="q2"  value="3"> London<br>
+  <input type="radio"name="q2"  value="4"> Paris<br>
+  <input type="radio"name="q2"  value="5"> Jamica <br>
+
+  Q3. What is your favorite hip hop artist?<br>
+  <input type="radio" name="q3" value="1"> Nicki Minaj<br>
+  <input type="radio"name="q3"  value="2">  Drake<br>
+  <input type="radio"name="q3"  value="3"> Megan the Stallion<br>
+  <input type="radio"name="q3"  value="4"> Cardi B<br>
+  <input type="radio"name="q3"  value="5"> Future <br>
+
+  Q4. What type of water do you drink?<br>
+  <input type="radio" name="q4" value="1"> Essentia<br>
+  <input type="radio"name="q4"  value="2">  Deer Park<br>
+  <input type="radio"name="q4"  value="3"> Vos<br>
+  <input type="radio"name="q4"  value="4"> Carbonated Water<br>
+  <input type="radio"name="q4"  value="5"> Fiji <br>
+
+  Q5. What type of laptop do you have?<br>
+  <input type="radio" name="q4" value="1"> Apple<br>
+  <input type="radio"name="q4"  value="2">  Dell<br>
+  <input type="radio"name="q4"  value="3"> Windows<br>
+  <input type="radio"name="q4"  value="4"> Hp<br>
+  <input type="radio"name="q4"  value="5"> intel<br>
+  
+  
+  
+  
+  
+
+</form>
+
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
 
 
 </body>
+
 </html>
