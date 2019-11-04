@@ -1,10 +1,10 @@
-/ ===============================================================================
+
 // LOAD DATA
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on table-data, waitinglist, etc.
 // ===============================================================================
 
-var friendData = require("../data/friend");
+var friendData = require("../app/data/friends");
 
 
 
@@ -53,11 +53,10 @@ module.exports = function(app) {
 
 //   EXTRA INFORMATION!!!
 
-//   app.post("/api/clear", function(req, res) {
-//     // Empty out the arrays of data
-//     tableData.length = 0;
-//     waitListData.length = 0;
+   app.post("/api/clear", function(req, res) {
+    tableData.length = 0;
+     waitListData.length = 0;
 
-//     res.json({ ok: true });
-//   });
-// };
+    res.json({ ok: true });
+  });
+ };
