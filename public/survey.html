@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Survey</title>
-
+<!-- Js file -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/public/survey.js"></script>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -158,56 +160,46 @@
         </option>
 
       </select>
-
+      <button type="submit" class="btn btn-primary " id="submit">
+        <i class="fa fa-check-circle" aria-hidden="true"></i>
+        Submit</button>
+      
     </form>
 </div>
-   
-    <br> 
 
-    <button type="submit" class="btn btn-primary submit">Submit</button>
-    <!-- </form>
+<hr>
 
-    <script type= "text/JavaScript">
+<footer class="footer">
+    <div class="container">
+      <p><a href="/api/survey">API Survey Link</a> 
+    </div>
+  </footer>
+
+  <!-- Modal content -->
+   <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">*</button>
+      <h2 class="modal-title"><strong>Best Match</strong></h2>
+    </div>
+    <div class="modal-body">
+      <h2 id="match-name"></h2>
+      <img id="match-img" style="width: 350px; height: 400px;" src="" alt="">
+
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-defult" data-dismiss="modal"> Close</button>
+
+    </div>
+
+  </div>
     
-  
-  $(".submit").on("click", function(event) {
-    event.preventDefault();
+    <div id="#resluts-modal">
 
-    // Here we grab the form elements
-    var newGuest = {
-      $("#question").on( "click" function(){
-            alert($(this).val());
-        });
-    };
+    </div>
+    
 
-    console.log(newGuest);
-
-    // This line is the magic. It"s very similar to the standard ajax function we used.
-    // Essentially we give it a URL, we give it the object we want to send, then we have a "callback".
-    // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
-    // depending on if a tables is available or not.
-
-    $.post("/api/survey", newGuest,
-      function(data) {
-
-        // If a table is available... tell user they are booked.
-        if (data) {
-          alert("Yay! We found you a friend!");
-        }
-
-        // If a table is available... tell user they on the waiting list.
-        else {
-          alert("Sorry you are on the wait list");
-        }
-
-        // Clear the form when submitting
-       
-
-      });
-
-  });
-
-    </script> -->
+    
    
 
 
