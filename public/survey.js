@@ -32,7 +32,7 @@ $("#submit").on("click",function (event) {
 
 
 // Ajax call that pulls data from api begins
-$.post("/api/survey",userData,function(data){
+$.post("/api/friends",userData,function(data){
 
 $("match-name").text(data.name);
 $("match-img").attr("src", data.photo);

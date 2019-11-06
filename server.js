@@ -1,7 +1,8 @@
 // Install npm packages as well as a server
 
 var express = require("express");
-
+var path = require("path");
+var nodemon = require("nodemon");
 
 // Tells node to create a express server
 var app = express();
@@ -11,6 +12,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
+app.use(express.static("app/public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
